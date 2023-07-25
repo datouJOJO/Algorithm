@@ -38,6 +38,31 @@ public class Sqrt {
     }
 
     /**
+     * 解法2 二分法
+     * 取左右边界 逐渐逼近
+     * 没有精度 向上取整
+     *
+     * @param x 待开方数字
+     * @return  开方结果
+     */
+    private static int sort2(int x) {
+        if (x == 0 || x == 1) return x;
+        long left = 1;
+        long right = x / 2;
+        while(left < right) {
+            long mid = (right + left) / 2 + 1;
+            if (mid * mid > x) {
+                right = mid - 1;
+            } else if (mid * mid == x) {
+                return (int)mid;
+            } else {
+                left = mid;
+            }
+        }
+        return (int)left;
+    }
+
+    /**
      * 取绝对值
      *
      * @param num   待取绝对值的数字
@@ -49,5 +74,6 @@ public class Sqrt {
 
     public static void main(String[] args) {
         System.out.println(sort1(2, 3));
+        System.out.println(sort2(2));
     }
 }
