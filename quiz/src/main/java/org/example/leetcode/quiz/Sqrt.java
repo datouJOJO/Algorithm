@@ -1,5 +1,5 @@
 
-package org.example.quiz;
+package org.example.leetcode.quiz;
 
 import java.math.BigDecimal;
 

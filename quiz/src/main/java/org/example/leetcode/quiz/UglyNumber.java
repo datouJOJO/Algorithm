@@ -1,4 +1,4 @@
-package org.example.quiz;
+package org.example.leetcode.quiz;
 
 /**
  * @Author: DiDi
